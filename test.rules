@@ -1,0 +1,24 @@
+# HTTP
+alert tcp any any -> any 80 (msg:"Access to gilgil.net"; content:"GET /"; content:"Host: "; content:"gilgil.net"; sid:10004; rev:1;)
+alert tcp any any -> any 80 (msg:"Access to naver.com"; content:"GET /"; content:"Host: "; content:"naver.com"; sid:10005; rev:1;)
+alert tcp any any -> any 80 (msg:"Access to cnn.com"; content:"GET /"; content:"Host: "; content:"cnn.com"; sid:10006; rev:1;)
+alert tcp any any -> any 80 (msg:"Access to daum.net"; content:"GET /"; content:"Host: "; content:"daum.net"; sid:10007; rev:1;)
+alert tcp any any -> any 80 (msg:"Access to amazon.com"; content:"GET /"; content:"Host: "; content:"amazon.com"; sid:10008; rev:1;)
+alert tcp any any -> any 80 (msg:"Access to ebay.com"; content:"GET /"; content:"Host: "; content:"ebay.com"; sid:10009; rev:1;)
+alert tcp any any -> any 80 (msg:"Access to nytimes.com"; content:"GET /"; content:"Host: "; content:"nytimes.com"; sid:10010; rev:1;)
+alert tcp any any -> any 80 (msg:"Access to kisia.or.kr"; content:"GET /"; content:"Host: "; content:"kisia.or.kr"; sid:10011; rev:1;)
+alert tcp any any -> any 80 (msg:"Access to espn.com"; content:"GET /"; content:"Host: "; content:"espn.com"; sid:10012; rev:1;)
+alert tcp any any -> any 80 (msg:"Access to kisa.or.kr"; content:"GET /"; content:"Host: "; content:"kisa.or.kr"; sid:10013; rev:1;)
+
+# HTTPS
+alert tls any any -> any 443 (msg:"TLS SNI Check for facebook.com"; tls.sni; content:"facebook.com"; endswith; sid:20004; rev:1;)
+alert tls any any -> any 443 (msg:"TLS SNI Check for linkedin.com"; tls.sni; content:"linkedin.com"; endswith; sid:20005; rev:1;)
+alert tls any any -> any 443 (msg:"TLS SNI Check for instagram.com"; tls.sni; content:"instagram.com"; endswith; sid:20006; rev:1;)
+alert tls any any -> any 443 (msg:"TLS SNI Check for google.com"; tls.sni; content:"google.com"; endswith; sid:20007; rev:1;)
+alert tls any any -> any 443 (msg:"TLS SNI Check for microsoft.com"; tls.sni; content:"microsoft.com"; endswith; sid:20008; rev:1;)
+alert tls any any -> any 443 (msg:"TLS SNI Check for apple.com"; tls.sni; content:"apple.com"; endswith; sid:20009; rev:1;)
+alert tls any any -> any 443 (msg:"TLS SNI Check for adobe.com"; tls.sni; content:"adobe.com"; endswith; sid:20010; rev:1;)
+alert tls any any -> any 443 (msg:"TLS SNI Check for yahoo.com"; tls.sni; content:"yahoo.com"; endswith; sid:20011; rev:1;)
+alert tls any any -> any 443 (msg:"TLS SNI Check for dropbox.com"; tls.sni; content:"dropbox.com"; endswith; sid:20012; rev:1;)
+alert tls any any -> any 443 (msg:"TLS SNI Check for spotify.com"; tls.sni; content:"spotify.com"; endswith; sid:20013; rev:1;)
+
